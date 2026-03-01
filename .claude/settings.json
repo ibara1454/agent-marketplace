@@ -1,0 +1,13 @@
+{
+  "extraKnownMarketplaces": {
+    "juns-agent-marketplace": {
+      "source": {
+        "source": "github",
+        "repo": "ibara1454/juns-agent-marketplace"
+      }
+    }
+  },
+  "enabledPlugins": {
+    "example-skills@anthropic-agent-skills": true
+  }
+}

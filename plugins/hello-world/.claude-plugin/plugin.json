@@ -1,0 +1,10 @@
+{
+  "name": "hello-world",
+  "description": "A sample template plugin demonstrating the /greet skill. Use it as a starting point for building your own plugins.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Chiajun Wang",
+    "email": "ibara1454@gmail.com"
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,22 @@
+{
+  "name": "juns-agent-marketplace",
+  "metadata": {
+    "description": "A marketplace of Claude Code plugins and skills, with GitHub Copilot CLI compatibility.",
+    "version": "0.1.0"
+  },
+  "owner": {
+    "name": "Chiajun Wang",
+    "email": "ibara1454@gmail.com"
+  },
+  "plugins": [
+    {
+      "name": "hello-world",
+      "source": "plugins/hello-world",
+      "description": "A sample template plugin demonstrating the /greet skill.",
+      "version": "0.1.0",
+      "skills": [
+        "./skills/greet"
+      ]
+    }
+  ]
+}
