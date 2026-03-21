@@ -6,15 +6,18 @@
   },
   "metadata": {
     "description": "A marketplace of Claude Code plugins and skills, with future support for GitHub Copilot extensions.",
-    "version": "0.1.0",
     "pluginRoot": "./plugins"
   },
   "plugins": [
     {
       "name": "hello-world",
       "source": "hello-world",
-      "description": "A sample template plugin demonstrating the /greet skill.",
-      "version": "0.1.0"
+      "description": "A sample template plugin demonstrating the /greet skill."
+    },
+    {
+      "name": "gh-workflow",
+      "source": "gh-workflow",
+      "description": "GitHub workflow automation skills"
     }
   ]
 }
