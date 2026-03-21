@@ -1,6 +1,6 @@
 # hello-world
 
-A sample template plugin for [juns-agent-marketplace](../../README.md). Use it as a starting point for building your own Claude Code plugins.
+A sample template plugin for [agent-marketplace](../../README.md). Use it as a starting point for building your own Claude Code plugins.
 
 ## Skills
 
@@ -13,8 +13,8 @@ A sample template plugin for [juns-agent-marketplace](../../README.md). Use it a
 Add the marketplace to Claude Code, then install this plugin:
 
 ```sh
-/plugin marketplace add ibara1454/juns-agent-marketplace
-/plugin install hello-world@juns-agent-marketplace
+/plugin marketplace add ibara1454/agent-marketplace
+/plugin install hello-world@agent-marketplace
 ```
 
 ## Usage
@@ -24,12 +24,12 @@ Once installed, invoke the `/greet` skill:
 ```
 /greet
 ```
-> Hello, World! Welcome to juns-agent-marketplace.
+> Hello, World! Welcome to agent-marketplace.
 
 ```
 /greet Alice
 ```
-> Hello, Alice! Welcome to juns-agent-marketplace.
+> Hello, Alice! Welcome to agent-marketplace.
 
 ## Structure
 

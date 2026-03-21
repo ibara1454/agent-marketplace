@@ -1,4 +1,4 @@
-# juns-agent-marketplace
+# agent-marketplace
 
 A marketplace of [Claude Code](https://claude.ai/code) plugins and skills, with [GitHub Copilot CLI](https://github.com/github/copilot-plugins) compatibility.
 
@@ -7,13 +7,13 @@ A marketplace of [Claude Code](https://claude.ai/code) plugins and skills, with 
 Add this marketplace to Claude Code:
 
 ```sh
-/plugin marketplace add ibara1454/juns-agent-marketplace
+/plugin marketplace add ibara1454/agent-marketplace
 ```
 
 Install a plugin:
 
 ```sh
-/plugin install hello-world@juns-agent-marketplace
+/plugin install hello-world@agent-marketplace
 ```
 
 Use a skill from the installed plugin:
@@ -31,7 +31,7 @@ Use a skill from the installed plugin:
 ## Repository Structure
 
 ```
-juns-agent-marketplace/
+agent-marketplace/
 ├── .claude-plugin/
 │   └── marketplace.json          # Claude Code marketplace registry
 ├── .github/

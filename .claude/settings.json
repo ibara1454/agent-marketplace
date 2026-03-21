@@ -1,9 +1,9 @@
 {
   "extraKnownMarketplaces": {
-    "juns-agent-marketplace": {
+    "agent-marketplace": {
       "source": {
         "source": "github",
-        "repo": "ibara1454/juns-agent-marketplace"
+        "repo": "ibara1454/agent-marketplace"
       }
     }
   },

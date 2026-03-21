@@ -7,7 +7,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 A Claude Code plugin marketplace. Users add it with:
 
 ```sh
-/plugin marketplace add ibara1454/juns-agent-marketplace
+/plugin marketplace add ibara1454/agent-marketplace
 ```
 
 The repo has no build system, test runner, or dependencies — all files are JSON and Markdown.

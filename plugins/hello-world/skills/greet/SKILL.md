@@ -11,5 +11,5 @@ Keep the message short and friendly — one or two sentences.
 
 ## Examples
 
-- `/greet` → Hello, World! Welcome to juns-agent-marketplace.
-- `/greet Alice` → Hello, Alice! Welcome to juns-agent-marketplace.
+- `/greet` → Hello, World! Welcome to agent-marketplace.
+- `/greet Alice` → Hello, Alice! Welcome to agent-marketplace.

@@ -1,4 +1,4 @@
-# Contributing to juns-agent-marketplace
+# Contributing to agent-marketplace
 
 Thank you for your interest in contributing! This guide explains how to add a new plugin to the marketplace.
 

@@ -1,5 +1,5 @@
 {
-  "name": "juns-agent-marketplace",
+  "name": "agent-marketplace",
   "metadata": {
     "description": "A marketplace of Claude Code plugins and skills, with GitHub Copilot CLI compatibility.",
     "version": "0.1.0"
