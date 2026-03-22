@@ -11,12 +11,12 @@
   "plugins": [
     {
       "name": "hello-world",
-      "source": "hello-world",
+      "source": "./plugins/hello-world",
       "description": "A sample template plugin demonstrating the /greet skill."
     },
     {
       "name": "gh-workflow",
-      "source": "gh-workflow",
+      "source": "./plugins/gh-workflow",
       "description": "GitHub workflow automation skills"
     }
   ]
