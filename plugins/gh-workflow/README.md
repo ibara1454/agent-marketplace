@@ -8,7 +8,7 @@ GitHub workflow automation skills for Claude Code.
 |-------|-------------|
 | `drafting-pr` | Creates draft PRs with the project's PR template |
 | `commenting-on-prs` | Posts inline review comments on PR diffs |
-| `uploading-attachments` | Uploads images to GitHub's CDN for PRs without committing |
+| `uploading-attachments` | Attaches images and videos to issues, PRs, and comments with `gh --attach` |
 | `agent-browser` | Browser automation CLI for AI agents |
 | `dogfood` | Exploratory web app testing with structured reports |
 
@@ -40,18 +40,21 @@ Posts inline review comments on GitHub pull request diffs. Batches multiple comm
 
 ## uploading-attachments
 
-Uploads image attachments to GitHub's asset CDN and returns markdown-ready URLs. Images are uploaded without committing them to the repository.
+Attaches local images and videos to issues, pull requests, or comments using first-party [`gh --attach`](https://gh.io/gh-attach), without committing media.
 
 **Key behaviors:**
-- Supports PNG, JPEG, GIF, and WebP formats
-- Uses `agent-browser` for browser-based GitHub authentication
-- Handles the full 3-step GitHub upload flow (get policy, upload to S3, finalize)
-- Returns results as a markdown table with ready-to-paste image syntax
-- Uploaded images **cannot be deleted** from GitHub's CDN (undocumented API caveat)
+- Requires GitHub CLI v2.99.0+, CLI authentication, and push access to the target repository on GitHub.com or GitHub Enterprise Cloud
+- Supports all six issue/PR create, edit, and comment commands, with up to 50 attachments per command
+- Rewrites local Markdown references in place, preserving image alt text; appends unreferenced files
+- Publishes or edits content together with the upload, so the target, content, and files require approval; runtime confirmation gates remain in force
+- Checks published state after partial failures before retrying, avoiding duplicate PRs or comments
+- Uses no browser login, cookie extraction, or custom upload scripts
 
-**Usage:** `/uploading-attachments <file-path> [file-path...]`
+**Usage:** `/uploading-attachments <issue-or-pr-url> <file-path> [file-path...]`; specify whether to edit the body or add a comment. For new issues or PRs, provide the target repository and requested create operation.
 
-**Triggers:** "upload this image to the PR", "attach this screenshot to the pull request", "get a CDN URL for this image"
+**Triggers:** "upload this image to the PR", "attach this screenshot to the pull request", "add this video to the issue", "get an attachment URL for this image"
+
+A URL-only request requires clarification: `--attach` is not a standalone staging upload, and the skill will not create placeholder content to obtain a URL.
 
 ## agent-browser
 
@@ -88,6 +91,5 @@ Systematically explores and tests a web application to find bugs, UX issues, and
 
 | Dependency | Required by | Install |
 |------------|-------------|---------|
-| [`gh`](https://cli.github.com/) | drafting-pr, commenting-on-prs, uploading-attachments | `brew install gh` then `gh auth login` |
-| [`agent-browser`](https://github.com/vercel-labs/agent-browser) | uploading-attachments, agent-browser, dogfood | `npm i -g agent-browser` then `agent-browser install` |
-| `jq` | uploading-attachments | `brew install jq` |
+| [`gh`](https://cli.github.com/) | drafting-pr, commenting-on-prs, uploading-attachments (v2.99.0+) | `brew install gh` (or `brew upgrade gh`) then `gh auth login` |
+| [`agent-browser`](https://github.com/vercel-labs/agent-browser) | agent-browser, dogfood | `npm i -g agent-browser` then `agent-browser install` |

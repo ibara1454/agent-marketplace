@@ -1,7 +1,7 @@
 {
   "name": "gh-workflow",
   "description": "GitHub workflow automation skills",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "author": {
     "name": "Chiajun Wang",
     "email": "ibara1454@gmail.com"
